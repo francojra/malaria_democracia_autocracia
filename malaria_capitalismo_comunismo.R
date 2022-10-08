@@ -1,0 +1,35 @@
+
+# Malária em países capitalistas e comunistas ----------------------------------------------------------------------------------------------
+# Autoria do script: Jeanne Franco ---------------------------------------------------------------------------------------------------------
+# Data: 07/10/22 ---------------------------------------------------------------------------------------------------------------------------
+# Referência: https://ourworldindata.org/malaria -------------------------------------------------------------------------------------------
+
+# Sobre os dados ---------------------------------------------------------------------------------------------------------------------------
+
+### Malária é uma doença transmitida de pessoa para pessoa através de mosquitos infectados.
+### A picada de um mosquito Anopheles infectado transmite um parasita que entra no sistema 
+### sanguíneo da vítima e viaja para o fígado da pessoa onde o parasita se reproduz.
+### Aí o parasita causa uma febre alta que envolve tremores e dores. Nos piores dos casos o
+### parasita leva ao coma e a morte.
+
+### Os parasitas são microorganismos unicelulares do grupo plasmodium. Plasmodium falciparum 
+### é de longe o mais letal nos seres humanos e responsável pela maioria das mortes.
+### O número de mortes anuais é certamente de centenas de milhares, mas as estimativas 
+### diferem entre as diferentes organizações de saúde mundiais: a Organização Mundial de
+### Saúde estima que 558.000 pessoas morreram por causa da malária em 2019. Institute of 
+### Health Metrics and Evaluation (IHME) coloca essa estimativa em 643.000.
+
+### A maioria das vítimas são crianças. Ela é uma das principais causas de mortalidade
+### infantil. Cada duodécima criança que morreu em 2017, morreu por causa da malária.
+
+# Carregar pacotes -------------------------------------------------------------------------------------------------------------------------
+
+library(tidyverse)
+library(cols4all)
+library(hrbrthemes)
+
+# Carregar dados ---------------------------------------------------------------------------------------------------------------------------
+
+
+
+
