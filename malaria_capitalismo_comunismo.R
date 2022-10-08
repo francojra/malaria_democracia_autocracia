@@ -68,17 +68,22 @@ ggplot(malaria1, aes(x = fct_reorder(Entity, media),
                                "#DDCC77", "#117733",
                                "#332288", "#AA4499")) +
   scale_y_continuous(expand = expansion(mult = c(0,0))) +
+  scale_x_discrete(labels = c("Cuba", "Alemanha", "Japão",
+                              "Estados Unidos", "Coreia do Norte", "China")) +
   labs(x = "Países", y = "Taxa de morte por malária") +
   theme_ipsum(axis_title_size = 16, axis_text_size = 14) +
   theme(legend.position = "none", axis.text = element_text(color = "black"))
 
-ggplot(malaria2, aes(x = Year, y = taxa_morte,
+ggplot(malaria2, aes(x = Year, y = taxa_morte, 
                      group = Entity, color = Entity)) +
-  geom_point() +
-  geom_line(1.2) +
+  geom_point(shape = 15, size = 2.5) +
+  geom_line(size = 1.2) +
   scale_color_manual(values = c("#88CCEE", "#CC6677",
                                "#DDCC77", "#117733",
-                               "#332288", "#AA4499")) +
-  labs(x = "Tempo (anos)", y = "Taxa de morte por malária") +
+                               "#332288", "#AA4499"),
+                     labels = c("China", "Cuba", "Alemanha",
+                                "Japão", "Coreia do Norte", "Estados Unidos")) +
+  labs(x = "Tempo (anos)", y = "Taxa de morte por malária",
+       color = "Países") +
   theme_ipsum(axis_title_size = 16, axis_text_size = 14) +
-  theme(legend.position = "none", axis.text = element_text(color = "black"))
+  theme(axis.text = element_text(color = "black"))
