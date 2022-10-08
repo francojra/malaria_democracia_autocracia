@@ -30,6 +30,32 @@ library(hrbrthemes)
 
 # Carregar dados ---------------------------------------------------------------------------------------------------------------------------
 
+malaria <- read.csv("malaria-death-rates.csv")
+view(malaria)
+names(malaria)
 
+# Manipular dados --------------------------------------------------------------------------------------------------------------------------
 
+malaria <- malaria %>%
+  select(-Code) %>%
+  rename(taxa_morte = Deaths...Malaria...Sex..Both...Age..Age.standardized..Rate.) %>%
+  view()
 
+malaria1 <- malaria %>%
+  filter(Entity %in% c("United States", "Germany", "Japan",
+                       "China", "Cuba", "North Korea")) %>%
+  group_by(Entity) %>%
+  summarise(media = mean(taxa_morte),
+            sd = sd(taxa_morte), n = n(),
+            se = sd/sqrt(n)) %>%
+  view()
+
+malaria2 <- malaria %>%
+  filter(Entity %in% c("United States", "Germany", "Japan",
+                       "China", "Cuba", "North Korea")) %>%
+  view()
+
+# Gráficos ---------------------------------------------------------------------------------------------------------------------------------
+
+  
+  
