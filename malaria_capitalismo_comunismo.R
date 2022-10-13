@@ -27,6 +27,7 @@
 library(tidyverse)
 library(cols4all)
 library(hrbrthemes)
+library(ggthemes)
 
 # Carregar dados ---------------------------------------------------------------------------------------------------------------------------
 
@@ -53,6 +54,10 @@ malaria1 <- malaria %>%
 malaria2 <- malaria %>%
   filter(Entity %in% c("United States", "Germany", "Japan",
                        "China", "Cuba", "North Korea")) %>%
+  view()
+
+malaria3 <- malaria %>%
+  filter(Entity %in% c("United States", "China")) %>%
   view()
 
 # Gráficos ---------------------------------------------------------------------------------------------------------------------------------
@@ -87,3 +92,17 @@ ggplot(malaria2, aes(x = Year, y = taxa_morte,
        color = "Países") +
   theme_ipsum(axis_title_size = 16, axis_text_size = 14) +
   theme(axis.text = element_text(color = "black"))
+
+c4a("dark2", 2)
+
+ggplot(malaria3, aes(x = Year, y = taxa_morte, 
+                  group = Entity, col = Entity)) +
+  geom_line(size = 2.2) +
+  scale_color_manual(values = c("#1B9E77", "#D95F02"),
+                     labels = c("China", "Estados Unidos")) +
+  labs(x = "Tempo (anos)", y = "Taxa de morte por malária (%)", 
+       color = "Países") +
+  theme_hc() +
+  theme(axis.title = element_text(size = 18),
+        axis.text = element_text(color = "black", size = 15),
+        legend.text = element_text(size = 12))
