@@ -100,7 +100,7 @@ ggplot(malaria3, aes(x = Year, y = taxa_morte,
   geom_line(size = 2.2) +
   scale_color_manual(values = c("#1B9E77", "#D95F02"),
                      labels = c("China", "Estados Unidos")) +
-  labs(x = "Tempo (anos)", y = "Taxa de morte por malária (%)", 
+  labs(x = "Tempo (anos)", y = "Taxa de morte por malária", 
        color = "Países") +
   theme_hc() +
   theme(axis.title = element_text(size = 18),
