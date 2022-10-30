@@ -1,4 +1,4 @@
-# Malária em países capitalistas e comunistas
+# Malária em países democratas e autocratas
 
 ### Autoria do script: Jeanne Franco
 ### Data: 07/10/22
